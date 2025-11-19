@@ -140,16 +140,16 @@ export default function ChatInterface({ initialQuery }: ChatInterfaceProps) {
       </div>
       
       {/* Header */}
-      <header className="flex items-center justify-between px-8 py-6 chat-header-enhanced relative z-10 h-20">
-        <div className="flex items-center space-x-4">
-          <div className="logo-container-enhanced w-12 h-12">
+      <header className="flex items-center justify-between px-10 py-10 chat-header-enhanced relative z-10 h-28 border-b border-purple-200/30">
+        <div className="flex items-center space-x-6">
+          <div className="logo-container-enhanced w-14 h-14">
             <div className="logo-inner-enhanced w-full h-full flex items-center justify-center">
-              <SearchIcon className="w-6 h-6 text-white" />
+              <SearchIcon className="w-7 h-7 text-white" />
             </div>
           </div>
           <div className="flex flex-col">
-            <span className="text-2xl font-black enhanced-title">Perplexity</span>
-            <span className="text-sm font-semibold text-purple-500/70">Chat Mode</span>
+            <span className="text-3xl font-black enhanced-title">Perplexity</span>
+            <span className="text-base font-semibold text-purple-500/70">Chat Mode</span>
           </div>
         </div>
         
@@ -157,7 +157,7 @@ export default function ChatInterface({ initialQuery }: ChatInterfaceProps) {
           variant="outline"
           size="sm"
           onClick={handleNewChat}
-          className="flex items-center gap-2 border-2 border-purple-300 text-purple-700 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white hover:border-transparent transition-all duration-300 shadow-lg hover:shadow-xl px-6 py-2.5 rounded-full font-semibold h-10 min-w-[130px] hover-lift"
+          className="flex items-center gap-3 border-2 border-purple-300 text-purple-700 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white hover:border-transparent transition-all duration-300 shadow-lg hover:shadow-xl px-8 py-3 rounded-full font-semibold h-12 min-w-[140px] hover-lift text-lg"
         >
           <RotateCcw className="w-5 h-5" />
           New Chat

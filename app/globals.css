@@ -2363,16 +2363,47 @@ body {
 /* Enhanced Text Visibility */
 .text-shadow-lg {
   text-shadow: 
-    0 2px 4px rgba(0, 0, 0, 0.3),
-    0 4px 8px rgba(0, 0, 0, 0.2),
-    0 8px 16px rgba(0, 0, 0, 0.1);
+    0 2px 4px rgba(0, 0, 0, 0.5),
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    0 8px 16px rgba(0, 0, 0, 0.2),
+    0 0 20px rgba(255, 255, 255, 0.8);
 }
 
 .text-shadow-colorful {
   text-shadow: 
-    0 0 10px rgba(255, 255, 255, 0.8),
-    0 0 20px rgba(255, 255, 255, 0.6),
-    0 0 30px rgba(255, 255, 255, 0.4);
+    0 0 10px rgba(255, 255, 255, 0.9),
+    0 0 20px rgba(255, 255, 255, 0.7),
+    0 0 30px rgba(255, 255, 255, 0.5),
+    0 2px 4px rgba(0, 0, 0, 0.4),
+    0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced subtitle with better contrast */
+.subtitle-enhanced {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+}
+
+@media (min-width: 768px) {
+  .subtitle-enhanced {
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    line-height: 1.7;
+  }
+}
+
+@media (min-width: 1024px) {
+  .subtitle-enhanced {
+    font-size: 1.625rem;
+    line-height: 1.8;
+  }
 }
 
 /* Enhanced Button Animations */

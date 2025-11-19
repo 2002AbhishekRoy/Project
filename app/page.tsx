@@ -175,23 +175,21 @@ export default function Home() {
               </h1>
             </div>
             <div className="content-max-width">
-              <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border-2 border-white/30 shadow-2xl">
-                <p className="subtitle-enhanced text-gray-800 font-bold drop-shadow-lg">
-                  Ask anything and get{' '}
-                  <span className="text-pink-600 font-black bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 bg-clip-text text-transparent drop-shadow-lg">
-                    instant
-                  </span>
-                  {', '}
-                  <span className="text-blue-600 font-black bg-gradient-to-r from-blue-500 via-cyan-400 to-teal-500 bg-clip-text text-transparent drop-shadow-lg">
-                    accurate answers
-                  </span>
-                  {' backed by '}
-                  <span className="text-emerald-600 font-black bg-gradient-to-r from-green-400 via-emerald-500 to-cyan-400 bg-clip-text text-transparent drop-shadow-lg">
-                    trusted sources
-                  </span>
-                  .
-                </p>
-              </div>
+              <p className="subtitle-enhanced text-gray-900 font-bold drop-shadow-2xl text-shadow-lg">
+                Ask anything and get{' '}
+                <span className="text-pink-600 font-black bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 bg-clip-text text-transparent drop-shadow-2xl text-shadow-colorful">
+                  instant
+                </span>
+                {', '}
+                <span className="text-blue-600 font-black bg-gradient-to-r from-blue-500 via-cyan-400 to-teal-500 bg-clip-text text-transparent drop-shadow-2xl text-shadow-colorful">
+                  accurate answers
+                </span>
+                {' backed by '}
+                <span className="text-emerald-600 font-black bg-gradient-to-r from-green-400 via-emerald-500 to-cyan-400 bg-clip-text text-transparent drop-shadow-2xl text-shadow-colorful">
+                  trusted sources
+                </span>
+                .
+              </p>
             </div>
           </div>
 
