@@ -67,7 +67,7 @@ export default function Home() {
           {/* Try Pro Button with Dialog */}
           <Dialog>
             <DialogTrigger asChild>
-              <Button className="relative overflow-hidden bg-gradient-to-r from-pink-500 via-red-500 via-yellow-500 to-pink-500 hover:from-red-500 hover:via-yellow-500 hover:via-pink-500 hover:to-purple-500 text-white font-semibold px-6 py-2.5 rounded-full shadow-xl hover:shadow-2xl hover:shadow-pink-500/50 transform hover:scale-110 transition-all duration-300 h-10 min-w-[110px] animate-pulse">
+              <Button className="relative overflow-hidden bg-gradient-to-r from-yellow-500 via-orange-500 via-red-500 via-pink-500 to-purple-500 hover:from-orange-400 hover:via-red-400 hover:via-pink-400 hover:via-purple-400 hover:to-indigo-500 text-white font-bold px-8 py-3 rounded-full shadow-2xl hover:shadow-3xl hover:shadow-purple-500/60 transform hover:scale-110 transition-all duration-500 h-12 min-w-[120px] animate-gradient bg-[length:200%_200%] border-2 border-white/30">
                 <Crown className="w-4 h-4 mr-2" />
                 Try Pro
                 <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
@@ -117,7 +117,7 @@ export default function Home() {
           {/* Sign In Button with Dialog */}
           <Dialog>
             <DialogTrigger asChild>
-              <Button variant="outline" className="border-3 border-cyan-400 bg-gradient-to-r from-cyan-100 to-blue-100 text-cyan-700 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-600 hover:text-white hover:border-cyan-300 font-semibold px-6 py-2.5 rounded-full shadow-lg hover:shadow-xl hover:shadow-cyan-400/50 transform hover:scale-110 transition-all duration-300 h-10 min-w-[100px]">
+              <Button variant="outline" className="border-3 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 text-white hover:from-blue-400 hover:via-purple-400 hover:to-pink-400 font-bold px-8 py-3 rounded-full shadow-2xl hover:shadow-3xl hover:shadow-cyan-400/60 transform hover:scale-110 transition-all duration-500 h-12 min-w-[110px] animate-gradient bg-[length:200%_200%] border-2 border-white/30">
                 <LogIn className="w-4 h-4 mr-2" />
                 Sign In
               </Button>
@@ -175,21 +175,23 @@ export default function Home() {
               </h1>
             </div>
             <div className="content-max-width">
-              <p className="subtitle-enhanced text-gray-700">
-                Ask anything and get{' '}
-                <span className="text-pink-600 font-black bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 bg-clip-text text-transparent">
-                  instant
-                </span>
-                {', '}
-                <span className="text-blue-600 font-black bg-gradient-to-r from-blue-500 via-cyan-400 to-teal-500 bg-clip-text text-transparent">
-                  accurate answers
-                </span>
-                {' backed by '}
-                <span className="text-emerald-600 font-black bg-gradient-to-r from-green-400 via-emerald-500 to-cyan-400 bg-clip-text text-transparent">
-                  trusted sources
-                </span>
-                .
-              </p>
+              <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border-2 border-white/30 shadow-2xl">
+                <p className="subtitle-enhanced text-gray-800 font-bold drop-shadow-lg">
+                  Ask anything and get{' '}
+                  <span className="text-pink-600 font-black bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 bg-clip-text text-transparent drop-shadow-lg">
+                    instant
+                  </span>
+                  {', '}
+                  <span className="text-blue-600 font-black bg-gradient-to-r from-blue-500 via-cyan-400 to-teal-500 bg-clip-text text-transparent drop-shadow-lg">
+                    accurate answers
+                  </span>
+                  {' backed by '}
+                  <span className="text-emerald-600 font-black bg-gradient-to-r from-green-400 via-emerald-500 to-cyan-400 bg-clip-text text-transparent drop-shadow-lg">
+                    trusted sources
+                  </span>
+                  .
+                </p>
+              </div>
             </div>
           </div>
 
@@ -232,10 +234,10 @@ export default function Home() {
                 {suggestedQuestions.map((question, index) => {
                   const glowClasses = ['card-glow-1', 'card-glow-2', 'card-glow-3', 'card-glow-4'];
                   const gradients = [
-                    'from-pink-600 via-red-500 via-orange-500 via-yellow-500 to-orange-600',
-                    'from-cyan-500 via-blue-600 via-purple-600 via-pink-500 to-red-500', 
-                    'from-green-500 via-emerald-600 via-teal-500 via-cyan-500 to-blue-500',
-                    'from-purple-600 via-pink-600 via-red-500 via-orange-500 to-yellow-500'
+                    'from-pink-600 via-red-600 via-orange-600 via-yellow-500 via-green-500 to-emerald-500',
+                    'from-cyan-600 via-blue-700 via-purple-700 via-pink-600 via-red-600 to-orange-500', 
+                    'from-green-600 via-emerald-700 via-teal-600 via-cyan-600 via-blue-600 to-purple-600',
+                    'from-purple-700 via-pink-700 via-red-600 via-orange-600 via-yellow-500 to-lime-500'
                   ];
                   const icons = [Star, Zap, Heart, Rocket];
                   const Icon = icons[index];
@@ -246,16 +248,18 @@ export default function Home() {
                         setQuery(question)
                         router.push(`/search?q=${encodeURIComponent(question)}`)
                       }}
-                      className={`suggestion-card-enhanced ${glowClasses[index]} text-white bg-gradient-to-br ${gradients[index]} hover-scale smooth-transition font-semibold animate-gradient bg-[length:200%_200%] shadow-2xl hover:shadow-3xl border-2 border-white/20 hover:border-white/40`}
+                      className={`suggestion-card-enhanced ${glowClasses[index]} text-white bg-gradient-to-br ${gradients[index]} hover-scale smooth-transition font-bold animate-gradient bg-[length:300%_300%] shadow-2xl hover:shadow-4xl border-3 border-white/40 hover:border-white/60 backdrop-blur-sm transform hover:rotate-1`}
                     >
-                      <div className="absolute top-6 right-6 opacity-80 group-hover:opacity-100 transition-opacity">
-                        <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg">
-                          <Icon className="w-6 h-6 text-white drop-shadow-lg" />
+                      <div className="absolute top-6 right-6 opacity-90 group-hover:opacity-100 transition-all duration-300">
+                        <div className="w-14 h-14 bg-gradient-to-br from-white/30 via-white/20 to-white/10 backdrop-blur-md rounded-full flex items-center justify-center shadow-2xl border-2 border-white/30 animate-pulse">
+                          <Icon className="w-7 h-7 text-white drop-shadow-2xl" />
                         </div>
                       </div>
                       <div className="relative z-10">
-                        <div className="text-sm mb-4 opacity-90 font-medium bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 inline-block">Popular Question</div>
-                        <div className="text-lg leading-relaxed font-semibold drop-shadow-lg">{question}</div>
+                        <div className="text-sm mb-4 opacity-95 font-bold bg-gradient-to-r from-white/40 via-white/30 to-white/20 backdrop-blur-lg rounded-full px-4 py-2 inline-block border border-white/30 shadow-lg">
+                          ✨ Popular Question
+                        </div>
+                        <div className="text-xl leading-relaxed font-bold drop-shadow-2xl text-shadow-lg">{question}</div>
                       </div>
                       <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </button>

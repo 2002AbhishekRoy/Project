@@ -2225,9 +2225,10 @@ body {
 .suggestion-card-enhanced {
   position: relative;
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  background-size: 200% 200%;
-  animation: gradient 8s ease infinite;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background-size: 300% 300%;
+  animation: gradient 12s ease infinite;
+  backdrop-filter: blur(10px);
 }
 
 .suggestion-card-enhanced::before {
@@ -2238,17 +2239,17 @@ body {
   right: 0;
   bottom: 0;
   background: linear-gradient(45deg, 
-    rgba(255, 255, 255, 0.15) 0%, 
+    rgba(255, 255, 255, 0.2) 0%, 
     transparent 50%, 
-    rgba(255, 255, 255, 0.15) 100%);
+    rgba(255, 255, 255, 0.2) 100%);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.4s ease;
   transform: translateX(-100%);
 }
 
 .suggestion-card-enhanced:hover::before {
   opacity: 1;
-  animation: shimmer 1.5s ease-in-out;
+  animation: shimmer 2s ease-in-out infinite;
 }
 
 .suggestion-card-enhanced::after {
@@ -2256,11 +2257,11 @@ body {
   position: absolute;
   inset: 0;
   background: linear-gradient(45deg, 
-    rgba(255, 255, 255, 0.1), 
+    rgba(255, 255, 255, 0.15), 
     transparent,
-    rgba(255, 255, 255, 0.1));
+    rgba(255, 255, 255, 0.15));
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.4s ease;
 }
 
 .suggestion-card-enhanced:hover::after {
@@ -2268,12 +2269,13 @@ body {
 }
 
 .suggestion-card-enhanced:hover {
-  transform: translateY(-12px) scale(1.03) rotateX(5deg);
+  transform: translateY(-16px) scale(1.05) rotateX(8deg) rotateY(2deg);
   box-shadow: 
-    0 30px 60px -12px rgba(0, 0, 0, 0.35),
-    0 25px 30px -5px rgba(0, 0, 0, 0.2),
-    0 15px 15px -5px rgba(0, 0, 0, 0.15),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    0 35px 70px -12px rgba(0, 0, 0, 0.4),
+    0 30px 40px -5px rgba(0, 0, 0, 0.25),
+    0 20px 20px -5px rgba(0, 0, 0, 0.2),
+    inset 0 2px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.1);
 }
 
 @keyframes shimmer {
@@ -2324,43 +2326,94 @@ body {
 /* Enhanced Card Hover Glow Effects */
 .card-glow-1:hover {
   box-shadow: 
-    0 0 40px rgba(236, 72, 153, 0.6),
-    0 0 80px rgba(239, 68, 68, 0.4),
-    0 0 120px rgba(245, 158, 11, 0.3);
+    0 0 50px rgba(236, 72, 153, 0.8),
+    0 0 100px rgba(239, 68, 68, 0.6),
+    0 0 150px rgba(245, 158, 11, 0.4),
+    0 0 200px rgba(34, 197, 94, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.2);
 }
 
 .card-glow-2:hover {
   box-shadow: 
-    0 0 40px rgba(6, 182, 212, 0.6),
-    0 0 80px rgba(59, 130, 246, 0.4),
-    0 0 120px rgba(147, 51, 234, 0.3);
+    0 0 50px rgba(6, 182, 212, 0.8),
+    0 0 100px rgba(59, 130, 246, 0.6),
+    0 0 150px rgba(147, 51, 234, 0.4),
+    0 0 200px rgba(236, 72, 153, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.2);
 }
 
 .card-glow-3:hover {
   box-shadow: 
-    0 0 40px rgba(16, 185, 129, 0.6),
-    0 0 80px rgba(52, 211, 153, 0.4),
-    0 0 120px rgba(6, 182, 212, 0.3);
+    0 0 50px rgba(16, 185, 129, 0.8),
+    0 0 100px rgba(52, 211, 153, 0.6),
+    0 0 150px rgba(6, 182, 212, 0.4),
+    0 0 200px rgba(59, 130, 246, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.2);
 }
 
 .card-glow-4:hover {
   box-shadow: 
-    0 0 40px rgba(147, 51, 234, 0.6),
-    0 0 80px rgba(236, 72, 153, 0.4),
-    0 0 120px rgba(245, 158, 11, 0.3);
+    0 0 50px rgba(147, 51, 234, 0.8),
+    0 0 100px rgba(236, 72, 153, 0.6),
+    0 0 150px rgba(239, 68, 68, 0.4),
+    0 0 200px rgba(245, 158, 11, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+/* Enhanced Text Visibility */
+.text-shadow-lg {
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.text-shadow-colorful {
+  text-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.6),
+    0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+/* Enhanced Button Animations */
+.colorful-button-enhanced {
+  background: linear-gradient(45deg, 
+    #ff6b6b, #ffa500, #ffff00, #00ff00, #0099ff, #6600ff, #ff6b6b);
+  background-size: 400% 400%;
+  animation: gradient 4s ease infinite;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.colorful-button-enhanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  transition: left 0.8s;
+}
+
+.colorful-button-enhanced:hover::before {
+  left: 100%;
 }
 
 /* Enhanced Landing Page Background */
 .landing-bg-enhanced {
   background: linear-gradient(-45deg, 
-    rgba(255, 182, 193, 0.4),
-    rgba(173, 216, 230, 0.4),
-    rgba(221, 160, 221, 0.4),
-    rgba(152, 251, 152, 0.4),
-    rgba(255, 218, 185, 0.4),
-    rgba(255, 192, 203, 0.4));
+    rgba(255, 182, 193, 0.5),
+    rgba(173, 216, 230, 0.5),
+    rgba(221, 160, 221, 0.5),
+    rgba(152, 251, 152, 0.5),
+    rgba(255, 218, 185, 0.5),
+    rgba(255, 192, 203, 0.5),
+    rgba(144, 238, 144, 0.5));
   background-size: 400% 400%;
-  animation: landing-bg-flow 20s ease infinite;
+  animation: landing-bg-flow 25s ease infinite;
 }
 
 @keyframes landing-bg-flow {
