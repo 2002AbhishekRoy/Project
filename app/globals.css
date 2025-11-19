@@ -2119,6 +2119,166 @@ body {
   }
 }
 
+/* Enhanced Colorful Animations */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  animation: gradient 4s ease infinite;
+  background-size: 400% 400%;
+}
+
+@keyframes rainbow-border {
+  0% { 
+    border-color: #ff6b6b;
+    box-shadow: 0 0 20px #ff6b6b;
+  }
+  16% { 
+    border-color: #ffa500;
+    box-shadow: 0 0 20px #ffa500;
+  }
+  33% { 
+    border-color: #ffff00;
+    box-shadow: 0 0 20px #ffff00;
+  }
+  50% { 
+    border-color: #00ff00;
+    box-shadow: 0 0 20px #00ff00;
+  }
+  66% { 
+    border-color: #0099ff;
+    box-shadow: 0 0 20px #0099ff;
+  }
+  83% { 
+    border-color: #6600ff;
+    box-shadow: 0 0 20px #6600ff;
+  }
+  100% { 
+    border-color: #ff6b6b;
+    box-shadow: 0 0 20px #ff6b6b;
+  }
+}
+
+.animate-rainbow-border {
+  animation: rainbow-border 3s linear infinite;
+}
+
+@keyframes colorful-glow {
+  0%, 100% {
+    box-shadow: 
+      0 0 30px rgba(255, 107, 107, 0.5),
+      0 0 60px rgba(255, 107, 107, 0.3),
+      0 0 90px rgba(255, 107, 107, 0.1);
+  }
+  16% {
+    box-shadow: 
+      0 0 30px rgba(255, 165, 0, 0.5),
+      0 0 60px rgba(255, 165, 0, 0.3),
+      0 0 90px rgba(255, 165, 0, 0.1);
+  }
+  33% {
+    box-shadow: 
+      0 0 30px rgba(255, 255, 0, 0.5),
+      0 0 60px rgba(255, 255, 0, 0.3),
+      0 0 90px rgba(255, 255, 0, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 0 30px rgba(0, 255, 0, 0.5),
+      0 0 60px rgba(0, 255, 0, 0.3),
+      0 0 90px rgba(0, 255, 0, 0.1);
+  }
+  66% {
+    box-shadow: 
+      0 0 30px rgba(0, 153, 255, 0.5),
+      0 0 60px rgba(0, 153, 255, 0.3),
+      0 0 90px rgba(0, 153, 255, 0.1);
+  }
+  83% {
+    box-shadow: 
+      0 0 30px rgba(102, 0, 255, 0.5),
+      0 0 60px rgba(102, 0, 255, 0.3),
+      0 0 90px rgba(102, 0, 255, 0.1);
+  }
+}
+
+.animate-colorful-glow {
+  animation: colorful-glow 4s ease-in-out infinite;
+}
+
+/* Enhanced Header with Colorful Background */
+.perplexity-header {
+  background: linear-gradient(135deg, 
+    rgba(236, 72, 153, 0.95) 0%, 
+    rgba(147, 51, 234, 0.95) 25%, 
+    rgba(59, 130, 246, 0.95) 50%, 
+    rgba(16, 185, 129, 0.95) 75%, 
+    rgba(245, 158, 11, 0.95) 100%);
+  animation: gradient 6s ease infinite;
+  background-size: 400% 400%;
+}
+
+/* Enhanced Colorful Suggestion Cards */
+.suggestion-card-enhanced {
+  position: relative;
+  overflow: hidden;
+}
+
+.suggestion-card-enhanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    transparent 50%, 
+    rgba(255, 255, 255, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.suggestion-card-enhanced:hover::before {
+  opacity: 1;
+}
+
+/* Enhanced Search Input with Colorful Focus */
+.search-input-wrapper:focus-within {
+  border: 3px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(45deg, #ff6b6b, #ffa500, #ffff00, #00ff00, #0099ff, #6600ff) border-box;
+  animation: rainbow-border 2s linear infinite;
+}
+
+/* Colorful Button Enhancements */
+.colorful-button {
+  background: linear-gradient(45deg, #ff6b6b, #ffa500, #ffff00, #00ff00, #0099ff, #6600ff);
+  background-size: 400% 400%;
+  animation: gradient 3s ease infinite;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.colorful-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s;
+}
+
+.colorful-button:hover::before {
+  left: 100%;
+}
+
 .smooth-scroll {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;

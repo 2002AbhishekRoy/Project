@@ -29,33 +29,35 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-br from-violet-100 via-pink-50 via-blue-50 to-cyan-100 flex flex-col relative overflow-hidden">
       {/* Enhanced Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Primary floating orbs */}
-        <div className="absolute -top-20 -right-20 w-96 h-96 bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-pulse floating"></div>
-        <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-full mix-blend-multiply filter blur-2xl opacity-25 animate-pulse" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-gradient-to-r from-yellow-300 via-orange-400 to-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{animationDelay: '4s'}}></div>
+        {/* Primary floating orbs with enhanced colors */}
+        <div className="absolute -top-20 -right-20 w-96 h-96 bg-gradient-to-r from-pink-400 via-red-400 via-yellow-400 to-orange-400 rounded-full mix-blend-multiply filter blur-2xl opacity-40 animate-pulse floating"></div>
+        <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-500 to-pink-400 rounded-full mix-blend-multiply filter blur-2xl opacity-35 animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-gradient-to-r from-green-300 via-emerald-400 via-teal-400 to-cyan-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse" style={{animationDelay: '4s'}}></div>
         
-        {/* Secondary decorative elements */}
-        <div className="absolute top-20 right-1/3 w-32 h-32 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full mix-blend-multiply filter blur-lg opacity-25 animate-pulse" style={{animationDelay: '1s'}}></div>
-        <div className="absolute bottom-1/4 right-20 w-40 h-40 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full mix-blend-multiply filter blur-lg opacity-20 animate-pulse" style={{animationDelay: '3s'}}></div>
+        {/* Secondary decorative elements with rainbow colors */}
+        <div className="absolute top-20 right-1/3 w-32 h-32 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 rounded-full mix-blend-multiply filter blur-lg opacity-35 animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-1/4 right-20 w-40 h-40 bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 rounded-full mix-blend-multiply filter blur-lg opacity-30 animate-pulse" style={{animationDelay: '3s'}}></div>
         
-        {/* Floating shapes */}
-        <div className="absolute top-1/4 left-20 w-6 h-6 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full animate-bounce opacity-60" style={{animationDelay: '0.5s'}}></div>
-        <div className="absolute top-2/3 right-1/4 w-4 h-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full animate-bounce opacity-50" style={{animationDelay: '1.5s'}}></div>
-        <div className="absolute bottom-1/3 left-1/3 w-8 h-8 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full animate-bounce opacity-40" style={{animationDelay: '2.5s'}}></div>
+        {/* Enhanced floating shapes with vibrant colors */}
+        <div className="absolute top-1/4 left-20 w-8 h-8 bg-gradient-to-r from-pink-500 to-red-500 rounded-full animate-bounce opacity-70" style={{animationDelay: '0.5s'}}></div>
+        <div className="absolute top-2/3 right-1/4 w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full animate-bounce opacity-60" style={{animationDelay: '1.5s'}}></div>
+        <div className="absolute bottom-1/3 left-1/3 w-10 h-10 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full animate-bounce opacity-50" style={{animationDelay: '2.5s'}}></div>
+        <div className="absolute top-1/2 right-1/5 w-4 h-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full animate-bounce opacity-60" style={{animationDelay: '3.5s'}}></div>
+        <div className="absolute bottom-1/5 left-1/5 w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-bounce opacity-65" style={{animationDelay: '4.5s'}}></div>
       </div>
       
       {/* Header */}
-      <header className="perplexity-header flex-between relative z-10">
+      <header className="perplexity-header flex-between relative z-10 bg-gradient-to-r from-purple-600/90 via-pink-500/90 to-orange-500/90 backdrop-blur-xl border-b-2 border-white/30">
         <div className="flex-start space-x-4">
           <div className="relative flex-shrink-0">
-            <div className="absolute -inset-1 bg-gradient-to-r from-violet-600 via-purple-600 to-pink-600 rounded-2xl blur opacity-40 animate-pulse"></div>
-            <div className="relative w-12 h-12 bg-gradient-to-br from-violet-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-2xl shadow-purple-500/50 hover:shadow-purple-500/70 transition-all duration-500 transform hover:scale-110">
+            <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-red-500 via-pink-500 via-purple-500 via-blue-500 via-green-500 to-yellow-400 rounded-2xl blur opacity-75 animate-pulse bg-[length:400%_400%] animate-gradient"></div>
+            <div className="relative w-12 h-12 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl shadow-purple-500/50 hover:shadow-cyan-400/70 transition-all duration-500 transform hover:scale-110">
               <Sparkles className="w-6 h-6 text-white animate-pulse" />
             </div>
           </div>
           <div className="flex flex-col">
-            <span className="text-2xl font-black bg-gradient-to-r from-purple-700 via-blue-600 to-cyan-600 bg-clip-text text-transparent tracking-tight">Perplexity</span>
-            <span className="text-xs font-semibold text-purple-500/70 -mt-1">AI Powered</span>
+            <span className="text-2xl font-black bg-gradient-to-r from-cyan-400 via-pink-400 via-yellow-400 via-green-400 to-blue-400 bg-clip-text text-transparent tracking-tight animate-pulse">Perplexity</span>
+            <span className="text-xs font-semibold text-cyan-200/90 -mt-1 animate-pulse">AI Powered</span>
           </div>
         </div>
         
@@ -63,7 +65,7 @@ export default function Home() {
           {/* Try Pro Button with Dialog */}
           <Dialog>
             <DialogTrigger asChild>
-              <Button className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 hover:from-purple-700 hover:via-pink-700 hover:to-orange-600 text-white font-semibold px-6 py-2.5 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 h-10 min-w-[110px]">
+              <Button className="relative overflow-hidden bg-gradient-to-r from-pink-500 via-red-500 via-yellow-500 to-pink-500 hover:from-red-500 hover:via-yellow-500 hover:via-pink-500 hover:to-purple-500 text-white font-semibold px-6 py-2.5 rounded-full shadow-xl hover:shadow-2xl hover:shadow-pink-500/50 transform hover:scale-110 transition-all duration-300 h-10 min-w-[110px] animate-pulse">
                 <Crown className="w-4 h-4 mr-2" />
                 Try Pro
                 <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
@@ -113,7 +115,7 @@ export default function Home() {
           {/* Sign In Button with Dialog */}
           <Dialog>
             <DialogTrigger asChild>
-              <Button variant="outline" className="border-2 border-purple-300 text-purple-700 hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 hover:text-white hover:border-transparent font-semibold px-6 py-2.5 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 h-10 min-w-[100px]">
+              <Button variant="outline" className="border-3 border-cyan-400 bg-gradient-to-r from-cyan-100 to-blue-100 text-cyan-700 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-600 hover:text-white hover:border-cyan-300 font-semibold px-6 py-2.5 rounded-full shadow-lg hover:shadow-xl hover:shadow-cyan-400/50 transform hover:scale-110 transition-all duration-300 h-10 min-w-[100px]">
                 <LogIn className="w-4 h-4 mr-2" />
                 Sign In
               </Button>
@@ -159,13 +161,13 @@ export default function Home() {
             <div className="relative mb-6">
               <div className="absolute -inset-4 bg-gradient-to-r from-purple-600 via-pink-500 to-cyan-500 rounded-3xl blur-2xl opacity-20 animate-pulse"></div>
               <h1 className="relative title-enhanced">
-                <span className="block bg-gradient-to-r from-purple-600 via-pink-500 via-blue-500 to-cyan-500 bg-clip-text text-transparent animate-pulse mb-3">
+                <span className="block bg-gradient-to-r from-pink-500 via-red-500 via-yellow-400 via-green-400 to-blue-500 bg-clip-text text-transparent animate-pulse mb-3 bg-[length:200%_200%]">
                   Where
                 </span>
-                <span className="block bg-gradient-to-r from-orange-500 via-red-500 via-pink-500 to-purple-500 bg-clip-text text-transparent mb-3">
+                <span className="block bg-gradient-to-r from-purple-500 via-pink-500 via-orange-400 via-red-500 to-yellow-400 bg-clip-text text-transparent mb-3 bg-[length:200%_200%]">
                   knowledge
                 </span>
-                <span className="block bg-gradient-to-r from-emerald-500 via-teal-500 via-cyan-500 to-blue-500 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-500 via-pink-500 to-red-400 bg-clip-text text-transparent bg-[length:200%_200%]">
                   begins ✨
                 </span>
               </h1>
@@ -173,15 +175,15 @@ export default function Home() {
             <div className="content-max-width">
               <p className="subtitle-enhanced text-gray-700">
                 Ask anything and get{' '}
-                <span className="text-purple-600 font-black bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                <span className="text-pink-600 font-black bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 bg-clip-text text-transparent">
                   instant
                 </span>
                 {', '}
-                <span className="text-blue-600 font-black bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                <span className="text-blue-600 font-black bg-gradient-to-r from-blue-500 via-cyan-400 to-teal-500 bg-clip-text text-transparent">
                   accurate answers
                 </span>
                 {' backed by '}
-                <span className="text-emerald-600 font-black bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                <span className="text-emerald-600 font-black bg-gradient-to-r from-green-400 via-emerald-500 to-cyan-400 bg-clip-text text-transparent">
                   trusted sources
                 </span>
                 .
@@ -193,11 +195,11 @@ export default function Home() {
           <div className="search-section-enhanced">
             <form onSubmit={handleSubmit} className="search-container">
             <div className="relative group">
-              <div className="absolute -inset-2 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 rounded-full blur-lg opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
+              <div className="absolute -inset-2 bg-gradient-to-r from-pink-600 via-purple-600 via-blue-500 via-cyan-500 to-pink-600 rounded-full blur-lg opacity-40 group-hover:opacity-60 transition-all duration-500 bg-[length:400%_400%] animate-gradient"></div>
               <div className="search-input-wrapper shadow-2xl hover:shadow-purple-500/25">
                 <div className="flex items-center">
                   <div className="absolute left-6 top-1/2 transform -translate-y-1/2">
-                    <div className="w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-full flex items-center justify-center animate-pulse">
                       <Search className="w-4 h-4 text-white" />
                     </div>
                   </div>
@@ -211,7 +213,7 @@ export default function Home() {
                   <Button
                     type="submit"
                     disabled={!query.trim()}
-                    className="search-button perplexity-button bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 hover:from-purple-600 hover:via-pink-600 hover:to-orange-600 disabled:opacity-40 disabled:cursor-not-allowed shadow-xl p-0 border-0">
+                    className="search-button perplexity-button bg-gradient-to-r from-pink-500 via-purple-500 via-blue-500 to-cyan-500 hover:from-cyan-500 hover:via-blue-600 hover:via-purple-600 hover:to-pink-600 disabled:opacity-40 disabled:cursor-not-allowed shadow-xl hover:shadow-2xl hover:shadow-purple-500/50 p-0 border-0 transform hover:scale-110 transition-all duration-300">
                     <ArrowRight className="w-5 h-5 text-white" />
                   </Button>
                 </div>
@@ -221,16 +223,16 @@ export default function Home() {
           </div>          {/* Suggested Questions */}
           <div className="questions-section-enhanced">
             <div className="section-spacing-enhanced">
-              <p className="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-8 text-center">
+              <p className="text-xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 via-blue-500 to-cyan-500 bg-clip-text text-transparent mb-8 text-center animate-pulse">
                 ✨ Try these popular questions:
               </p>
               <div className="cards-grid-perfect">
                 {suggestedQuestions.map((question, index) => {
                   const gradients = [
-                    'from-purple-500 via-pink-500 to-red-500',
-                    'from-blue-500 via-cyan-500 to-teal-500', 
-                    'from-green-500 via-emerald-500 to-cyan-500',
-                    'from-orange-500 via-red-500 to-pink-500'
+                    'from-pink-500 via-red-500 via-orange-400 to-yellow-400',
+                    'from-cyan-400 via-blue-500 via-purple-500 to-pink-500', 
+                    'from-green-400 via-emerald-500 via-teal-400 to-cyan-400',
+                    'from-purple-500 via-pink-500 via-red-500 to-orange-400'
                   ];
                   const icons = [Star, Zap, Heart, Rocket];
                   const Icon = icons[index];
@@ -263,7 +265,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="landing-footer text-center relative z-10">
         <div className="max-w-4xl mx-auto space-y-4">
-          <p className="text-lg font-bold bg-gradient-to-r from-purple-600 via-blue-500 to-cyan-500 bg-clip-text text-transparent">
+          <p className="text-lg font-bold bg-gradient-to-r from-pink-500 via-purple-500 via-blue-500 via-cyan-500 to-green-400 bg-clip-text text-transparent animate-pulse">
             🚀 Powered by advanced AI technology ✨
           </p>
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-600">
