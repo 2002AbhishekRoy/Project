@@ -26,24 +26,26 @@ export default function Home() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-violet-100 via-pink-50 via-blue-50 to-cyan-100 flex flex-col relative overflow-hidden">
+    <div className="min-h-screen landing-bg-enhanced flex flex-col relative overflow-hidden">
       {/* Enhanced Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Primary floating orbs with enhanced colors */}
-        <div className="absolute -top-20 -right-20 w-96 h-96 bg-gradient-to-r from-pink-400 via-red-400 via-yellow-400 to-orange-400 rounded-full mix-blend-multiply filter blur-2xl opacity-40 animate-pulse floating"></div>
-        <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-500 to-pink-400 rounded-full mix-blend-multiply filter blur-2xl opacity-35 animate-pulse" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-gradient-to-r from-green-300 via-emerald-400 via-teal-400 to-cyan-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse" style={{animationDelay: '4s'}}></div>
+        <div className="absolute -top-20 -right-20 w-96 h-96 bg-gradient-to-r from-pink-500 via-red-500 via-yellow-500 to-orange-500 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-pulse floating-enhanced animate-colorful-glow"></div>
+        <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-gradient-to-r from-cyan-500 via-blue-600 via-purple-600 to-pink-500 rounded-full mix-blend-multiply filter blur-2xl opacity-45 animate-pulse animate-colorful-glow" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-gradient-to-r from-green-400 via-emerald-500 via-teal-500 to-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-pulse animate-colorful-glow" style={{animationDelay: '4s'}}></div>
         
         {/* Secondary decorative elements with rainbow colors */}
-        <div className="absolute top-20 right-1/3 w-32 h-32 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 rounded-full mix-blend-multiply filter blur-lg opacity-35 animate-pulse" style={{animationDelay: '1s'}}></div>
-        <div className="absolute bottom-1/4 right-20 w-40 h-40 bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 rounded-full mix-blend-multiply filter blur-lg opacity-30 animate-pulse" style={{animationDelay: '3s'}}></div>
+        <div className="absolute top-20 right-1/3 w-32 h-32 bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 rounded-full mix-blend-multiply filter blur-lg opacity-45 animate-pulse animate-colorful-glow" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-1/4 right-20 w-40 h-40 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-full mix-blend-multiply filter blur-lg opacity-40 animate-pulse animate-colorful-glow" style={{animationDelay: '3s'}}></div>
+        <div className="absolute top-1/2 left-10 w-36 h-36 bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 rounded-full mix-blend-multiply filter blur-lg opacity-35 animate-pulse animate-colorful-glow" style={{animationDelay: '5s'}}></div>
         
         {/* Enhanced floating shapes with vibrant colors */}
-        <div className="absolute top-1/4 left-20 w-8 h-8 bg-gradient-to-r from-pink-500 to-red-500 rounded-full animate-bounce opacity-70" style={{animationDelay: '0.5s'}}></div>
-        <div className="absolute top-2/3 right-1/4 w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full animate-bounce opacity-60" style={{animationDelay: '1.5s'}}></div>
-        <div className="absolute bottom-1/3 left-1/3 w-10 h-10 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full animate-bounce opacity-50" style={{animationDelay: '2.5s'}}></div>
-        <div className="absolute top-1/2 right-1/5 w-4 h-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full animate-bounce opacity-60" style={{animationDelay: '3.5s'}}></div>
-        <div className="absolute bottom-1/5 left-1/5 w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-bounce opacity-65" style={{animationDelay: '4.5s'}}></div>
+        <div className="absolute top-1/4 left-20 w-10 h-10 bg-gradient-to-r from-pink-600 to-red-600 rounded-full animate-bounce opacity-80 shadow-lg shadow-pink-500/50" style={{animationDelay: '0.5s'}}></div>
+        <div className="absolute top-2/3 right-1/4 w-8 h-8 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full animate-bounce opacity-70 shadow-lg shadow-cyan-500/50" style={{animationDelay: '1.5s'}}></div>
+        <div className="absolute bottom-1/3 left-1/3 w-12 h-12 bg-gradient-to-r from-yellow-600 to-orange-600 rounded-full animate-bounce opacity-60 shadow-lg shadow-yellow-500/50" style={{animationDelay: '2.5s'}}></div>
+        <div className="absolute top-1/2 right-1/5 w-6 h-6 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full animate-bounce opacity-70 shadow-lg shadow-green-500/50" style={{animationDelay: '3.5s'}}></div>
+        <div className="absolute bottom-1/5 left-1/5 w-8 h-8 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full animate-bounce opacity-75 shadow-lg shadow-purple-500/50" style={{animationDelay: '4.5s'}}></div>
+        <div className="absolute top-3/4 right-1/3 w-4 h-4 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full animate-bounce opacity-65 shadow-lg shadow-indigo-500/50" style={{animationDelay: '5.5s'}}></div>
       </div>
       
       {/* Header */}
@@ -159,7 +161,7 @@ export default function Home() {
           {/* Hero Section */}
           <div className="hero-container-enhanced">
             <div className="relative mb-6">
-              <div className="absolute -inset-4 bg-gradient-to-r from-purple-600 via-pink-500 to-cyan-500 rounded-3xl blur-2xl opacity-20 animate-pulse"></div>
+              <div className="absolute -inset-6 bg-gradient-to-r from-pink-600 via-purple-600 via-blue-500 via-cyan-500 via-green-500 via-yellow-500 to-orange-600 rounded-3xl blur-3xl opacity-30 animate-pulse animate-gradient bg-[length:400%_400%]"></div>
               <h1 className="relative title-enhanced">
                 <span className="block bg-gradient-to-r from-pink-500 via-red-500 via-yellow-400 via-green-400 to-blue-500 bg-clip-text text-transparent animate-pulse mb-3 bg-[length:200%_200%]">
                   Where
@@ -228,11 +230,12 @@ export default function Home() {
               </p>
               <div className="cards-grid-perfect">
                 {suggestedQuestions.map((question, index) => {
+                  const glowClasses = ['card-glow-1', 'card-glow-2', 'card-glow-3', 'card-glow-4'];
                   const gradients = [
-                    'from-pink-500 via-red-500 via-orange-400 to-yellow-400',
-                    'from-cyan-400 via-blue-500 via-purple-500 to-pink-500', 
-                    'from-green-400 via-emerald-500 via-teal-400 to-cyan-400',
-                    'from-purple-500 via-pink-500 via-red-500 to-orange-400'
+                    'from-pink-600 via-red-500 via-orange-500 via-yellow-500 to-orange-600',
+                    'from-cyan-500 via-blue-600 via-purple-600 via-pink-500 to-red-500', 
+                    'from-green-500 via-emerald-600 via-teal-500 via-cyan-500 to-blue-500',
+                    'from-purple-600 via-pink-600 via-red-500 via-orange-500 to-yellow-500'
                   ];
                   const icons = [Star, Zap, Heart, Rocket];
                   const Icon = icons[index];
@@ -243,14 +246,16 @@ export default function Home() {
                         setQuery(question)
                         router.push(`/search?q=${encodeURIComponent(question)}`)
                       }}
-                      className={`suggestion-card-enhanced text-white bg-gradient-to-br ${gradients[index]} hover-scale smooth-transition font-semibold`}
+                      className={`suggestion-card-enhanced ${glowClasses[index]} text-white bg-gradient-to-br ${gradients[index]} hover-scale smooth-transition font-semibold animate-gradient bg-[length:200%_200%] shadow-2xl hover:shadow-3xl border-2 border-white/20 hover:border-white/40`}
                     >
-                      <div className="absolute top-6 right-6 opacity-60 group-hover:opacity-100 transition-opacity">
-                        <Icon className="w-8 h-8" />
+                      <div className="absolute top-6 right-6 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg">
+                          <Icon className="w-6 h-6 text-white drop-shadow-lg" />
+                        </div>
                       </div>
                       <div className="relative z-10">
-                        <div className="text-sm mb-4 opacity-90 font-medium">Popular Question</div>
-                        <div className="text-lg leading-relaxed">{question}</div>
+                        <div className="text-sm mb-4 opacity-90 font-medium bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 inline-block">Popular Question</div>
+                        <div className="text-lg leading-relaxed font-semibold drop-shadow-lg">{question}</div>
                       </div>
                       <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </button>
