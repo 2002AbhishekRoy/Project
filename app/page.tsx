@@ -59,7 +59,7 @@ export default function Home() {
           </div>
         </div>
         
-        <div className="flex items-center space-x-3">
+        <div className="button-group-enhanced">
           {/* Try Pro Button with Dialog */}
           <Dialog>
             <DialogTrigger asChild>
@@ -152,13 +152,13 @@ export default function Home() {
       </header>
 
       {/* Main Content */}
-      <main className="flex-1 flex-center px-8 py-12 relative z-10 min-h-[calc(100vh-80px)]">
-        <div className="perplexity-container text-center w-full">
+      <main className="main-content-container relative z-10">
+        <div className="perplexity-container perfect-center w-full">
           {/* Hero Section */}
-          <div className="element-spacing">
+          <div className="hero-container-enhanced">
             <div className="relative mb-6">
               <div className="absolute -inset-4 bg-gradient-to-r from-purple-600 via-pink-500 to-cyan-500 rounded-3xl blur-2xl opacity-20 animate-pulse"></div>
-              <h1 className="relative text-hero">
+              <h1 className="relative title-enhanced">
                 <span className="block bg-gradient-to-r from-purple-600 via-pink-500 via-blue-500 to-cyan-500 bg-clip-text text-transparent animate-pulse mb-3">
                   Where
                 </span>
@@ -170,8 +170,8 @@ export default function Home() {
                 </span>
               </h1>
             </div>
-            <div className="max-w-3xl mx-auto px-4">
-              <p className="text-lg sm:text-xl md:text-2xl text-gray-700 font-semibold leading-relaxed">
+            <div className="content-max-width">
+              <p className="subtitle-enhanced text-gray-700">
                 Ask anything and get{' '}
                 <span className="text-purple-600 font-black bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                   instant
@@ -190,7 +190,8 @@ export default function Home() {
           </div>
 
           {/* Search Bar */}
-          <form onSubmit={handleSubmit} className="search-container">
+          <div className="search-section-enhanced">
+            <form onSubmit={handleSubmit} className="search-container">
             <div className="relative group">
               <div className="absolute -inset-2 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 rounded-full blur-lg opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
               <div className="search-input-wrapper shadow-2xl hover:shadow-purple-500/25">
@@ -215,16 +216,15 @@ export default function Home() {
                   </Button>
                 </div>
               </div>
-            </div>
-          </form>
-
-          {/* Suggested Questions */}
-          <div className="w-full px-4">
-            <div className="space-y-8">
-              <p className="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+              </div>
+            </form>
+          </div>          {/* Suggested Questions */}
+          <div className="questions-section-enhanced">
+            <div className="section-spacing-enhanced">
+              <p className="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-8 text-center">
                 ✨ Try these popular questions:
               </p>
-              <div className="grid-cards max-w-4xl mx-auto">
+              <div className="cards-grid-perfect">
                 {suggestedQuestions.map((question, index) => {
                   const gradients = [
                     'from-purple-500 via-pink-500 to-red-500',
@@ -241,7 +241,7 @@ export default function Home() {
                         setQuery(question)
                         router.push(`/search?q=${encodeURIComponent(question)}`)
                       }}
-                      className={`relative group suggestion-card text-left text-white bg-gradient-to-br ${gradients[index]} hover-scale rounded-2xl border-0 smooth-transition hover-shadow font-semibold overflow-hidden`}
+                      className={`suggestion-card-enhanced text-white bg-gradient-to-br ${gradients[index]} hover-scale smooth-transition font-semibold`}
                     >
                       <div className="absolute top-6 right-6 opacity-60 group-hover:opacity-100 transition-opacity">
                         <Icon className="w-8 h-8" />
@@ -261,7 +261,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="py-8 px-8 text-center relative z-10 bg-white/5 backdrop-blur-sm border-t border-white/20 mt-auto">
+      <footer className="landing-footer text-center relative z-10">
         <div className="max-w-4xl mx-auto space-y-4">
           <p className="text-lg font-bold bg-gradient-to-r from-purple-600 via-blue-500 to-cyan-500 bg-clip-text text-transparent">
             🚀 Powered by advanced AI technology ✨
