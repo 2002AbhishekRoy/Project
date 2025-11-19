@@ -1701,3 +1701,149 @@ body {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
+
+/* Enhanced Fade-in Animations for Streaming Content */
+@keyframes fade-in {
+  from { 
+    opacity: 0; 
+    transform: translateY(10px);
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+/* Enhanced Search State Animations */
+@keyframes search-state-appear {
+  from {
+    opacity: 0;
+    transform: translateX(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.search-state-item {
+  animation: search-state-appear 0.3s ease-out forwards;
+}
+
+/* Enhanced Source Card Staggered Animation */
+@keyframes stagger-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.source-card-enhanced:nth-child(1) {
+  animation: stagger-fade-in 0.4s ease-out 0.1s forwards;
+  opacity: 0;
+}
+
+.source-card-enhanced:nth-child(2) {
+  animation: stagger-fade-in 0.4s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.source-card-enhanced:nth-child(3) {
+  animation: stagger-fade-in 0.4s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.source-card-enhanced:nth-child(4) {
+  animation: stagger-fade-in 0.4s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.source-card-enhanced:nth-child(5) {
+  animation: stagger-fade-in 0.4s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+.source-card-enhanced:nth-child(6) {
+  animation: stagger-fade-in 0.4s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+/* Enhanced Typing Indicator */
+@keyframes typing-pulse {
+  0%, 100% {
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  }
+  50% {
+    background: linear-gradient(90deg, #8b5cf6, #ec4899);
+  }
+}
+
+.typing-indicator {
+  animation: typing-pulse 1.5s ease-in-out infinite;
+}
+
+/* Enhanced Spinner Animation */
+@keyframes enhanced-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-enhanced-spin {
+  animation: enhanced-spin 1s linear infinite;
+}
+
+/* Question Message Animation */
+@keyframes question-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(50px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.user-message-enhanced {
+  animation: question-slide-in 0.4s ease-out forwards;
+}
+
+/* Enhanced Scroll Behavior */
+.chat-messages {
+  scroll-padding-top: 100px; /* Account for fixed header */
+}
+
+/* Smooth State Transitions */
+.search-progress-bar {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  height: 2px;
+  border-radius: 2px;
+  animation: progress-flow 2s ease-in-out infinite;
+}
+
+@keyframes progress-flow {
+  0% { 
+    background-position: 0% 50%;
+    background-size: 200% 200%;
+  }
+  50% { 
+    background-position: 100% 50%;
+    background-size: 200% 200%;
+  }
+  100% { 
+    background-position: 0% 50%;
+    background-size: 200% 200%;
+  }
+}

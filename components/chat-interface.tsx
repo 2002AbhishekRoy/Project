@@ -35,21 +35,25 @@ export default function ChatInterface({ initialQuery }: ChatInterfaceProps) {
   const scrollToQuestion = (messageId: string) => {
     const messageElement = document.getElementById(`message-${messageId}`)
     if (messageElement) {
-      const yOffset = -80 // Offset for header
-      const y = messageElement.getBoundingClientRect().top + window.pageYOffset + yOffset
-      window.scrollTo({ top: y, behavior: 'smooth' })
+      // Calculate position to move question to top of viewport minus header height
+      const headerHeight = 80
+      const targetPosition = messageElement.offsetTop - headerHeight
+      window.scrollTo({ 
+        top: targetPosition, 
+        behavior: 'smooth' 
+      })
     }
   }
 
   useEffect(() => {
     if (messages.length > 0) {
       const latestMessage = messages[messages.length - 1]
-      if (latestMessage.isStreaming) {
-        // Scroll to the question when starting to stream
-        setTimeout(() => scrollToQuestion(latestMessage.id), 100)
-      } else {
-        // Scroll to bottom when message is complete
-        scrollToBottom()
+      if (latestMessage.isStreaming && latestMessage.searchStates.length === 1) {
+        // Scroll to question when first search state appears (like Perplexity)
+        setTimeout(() => scrollToQuestion(latestMessage.id), 150)
+      } else if (latestMessage.isComplete) {
+        // Auto-scroll to bottom when answer is complete
+        setTimeout(() => scrollToBottom(), 300)
       }
     }
   }, [messages])
@@ -199,17 +203,22 @@ export default function ChatInterface({ initialQuery }: ChatInterfaceProps) {
                 {/* Response */}
                 <div className="space-y-6">
                   {/* Search States */}
-                  {message.searchStates.length > 0 && !message.isComplete && (
-                    <div className="space-y-4">
-                      {message.searchStates.slice(-3).map((state, index) => (
-                        <div key={index} className="flex items-center gap-3 text-base text-gray-600">
-                          {index === message.searchStates.slice(-3).length - 1 ? (
-                            <LoadingDots text={state.message} />
+                  {message.searchStates.length > 0 && (
+                    <div className="space-y-3 mb-6">
+                      {message.searchStates.map((state, index) => (
+                        <div key={index} className="flex items-center gap-3 text-base">
+                          {message.isStreaming && index === message.searchStates.length - 1 ? (
+                            <div className="flex items-center gap-3">
+                              <div className="w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+                              <span className="text-blue-600 font-medium">{state.message}</span>
+                            </div>
                           ) : (
-                            <>
-                              <Clock className="w-5 h-5 text-green-500" />
-                              <span className="text-gray-500">{state.message}</span>
-                            </>
+                            <div className="flex items-center gap-3">
+                              <div className="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
+                                <div className="w-2 h-2 bg-white rounded-full"></div>
+                              </div>
+                              <span className="text-green-600 font-medium">{state.message}</span>
+                            </div>
                           )}
                         </div>
                       ))}
@@ -218,12 +227,14 @@ export default function ChatInterface({ initialQuery }: ChatInterfaceProps) {
 
                   {/* Sources */}
                   {message.sources.length > 0 && (
-                    <div className="space-y-6">
+                    <div className="space-y-6 animate-fade-in">
                       <div className="flex items-center gap-3 mb-6">
-                        <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
+                        <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center animate-pulse">
                           <Globe className="w-4 h-4 text-white" />
                         </div>
-                        <p className="text-lg font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Sources found ✨</p>
+                        <p className="text-lg font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                          Sources found • {message.sources.length} results
+                        </p>
                       </div>
                       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                         {message.sources.map((source, index) => {
@@ -263,11 +274,11 @@ export default function ChatInterface({ initialQuery }: ChatInterfaceProps) {
 
                   {/* Answer */}
                   {message.answer && (
-                    <div className="prose prose-gray max-w-none">
+                    <div className="prose prose-gray max-w-none animate-fade-in">
                       <div className="text-gray-900 whitespace-pre-wrap text-lg md:text-xl leading-relaxed font-medium">
                         {message.answer}
                         {message.isStreaming && (
-                          <span className="inline-block w-2 h-6 bg-blue-600 ml-1 animate-pulse" />
+                          <span className="inline-block w-3 h-6 bg-gradient-to-r from-blue-500 to-purple-500 ml-1 animate-pulse rounded-sm" />
                         )}
                       </div>
                     </div>
@@ -289,7 +300,7 @@ export default function ChatInterface({ initialQuery }: ChatInterfaceProps) {
                 <Input
                   ref={inputRef}
                   type="text"
-                  placeholder="Ask a follow up... ✨💡🚀"
+                  placeholder={messages.length === 0 ? "Ask anything... ✨" : "Ask a follow up..."}
                   value={currentInput}
                   onChange={(e) => setCurrentInput(e.target.value)}
                   disabled={isStreaming}
